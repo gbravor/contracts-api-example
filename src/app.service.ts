@@ -1,8 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import { Module } from '@nestjs/common';
+import { ContractsModule } from './contracts/contracts.module';
 
-@Injectable()
-export class AppService {
-  getHello(): string {
-    return 'Hello World!';
-  }
-}
+@Module({
+  imports: [ContractsModule],
+  controllers: [],
+  providers: [],
+})
+export class AppModule {}
